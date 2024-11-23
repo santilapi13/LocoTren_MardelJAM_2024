@@ -3,6 +3,14 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 
+public enum PlayerState
+{
+    accelerating,
+    constantSpeed,
+    braking,
+    stopped
+}
+
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
@@ -22,11 +30,11 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     public float MoveInput { get; private set; } 
     private float turnInput;
-
     public float SpeedPercentage => rb.velocity.magnitude / maxSpeed;
     
-    private bool moving;
-
+    
+    public PlayerState PlayerState { get; private set; }
+    
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -35,18 +43,17 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        // Capturar entradas del jugador.
+        
         MoveInput = Input.GetAxis("Vertical");
         turnInput = Input.GetAxis("Horizontal");
     }
 
     private void FixedUpdate()
     {
-        if(rb.velocity.magnitude < 0.1 && MoveInput  != 0) moving = true;
+        HandleState();
         HandleDrift();
         HandleMovement();
         HandleSteering();
-        //if (moving) StartCoroutine(AcelerationSoundManager());
     }
 
     private void HandleDrift()
@@ -103,16 +110,80 @@ public class Player : MonoBehaviour
         }
     }
 
-    /*
-    private IEnumerator AcelerationSoundManager()
+    private void HandleState()
     {
-        moving = false;
-        var condition = new Func<bool> (()=> rb.velocity.magnitude > 0.1f);
-        AudioManager.Instance.PlaySFXUntil("acelerada_loop", condition);
-        yield return new WaitUntil(condition);
-        //AudioManager.Instance.PlaySFXOneShot("frenada");
+        if (rb.velocity.magnitude < 0.1f)
+        {
+            SetPlayerState(PlayerState.stopped);
+            return;
+        }
+
+        if (MoveInput * rb.velocity.normalized.y > 0.1f && SpeedPercentage < 0.7)
+        {
+            SetPlayerState(PlayerState.accelerating);
+            return;
+        }
+
+        if (SpeedPercentage > 0.7)
+        {
+            SetPlayerState(PlayerState.constantSpeed);
+            return;
+        }
+
+       
+        SetPlayerState(PlayerState.braking);
+    }
+
+    private void SetPlayerState(PlayerState newState)
+    {
+        if (PlayerState == newState) return;
+        
+        PlayerState = newState;
+            OnStateChanged();
+        
+    }
+
+    private void OnStateChanged()
+    {
+        switch (PlayerState)
+        {
+            case PlayerState.stopped:
+            HandleStoppedState();
+            break;
+            case PlayerState.accelerating:
+            HandleAcceleratingState();
+            break;
+            case PlayerState.constantSpeed:
+            HandleConstantSpeedState();
+            break;
+            case PlayerState.braking:
+            HandleBrakingState();
+            break;
+        } 
+    }
+
+
+    private void HandleStoppedState()
+    {
+        AudioManager.Instance.StopAceleration();
+    }
+
+    private void HandleAcceleratingState()
+    {
+        AudioManager.Instance.PlayAceleration("arranque");
+    }
+
+    private void HandleConstantSpeedState()
+    {
+        AudioManager.Instance.PlayAceleration("constante");
+    }
+
+    private void HandleBrakingState()
+    {
+        AudioManager.Instance.PlayAceleration("desacelerar");
     }
     
-    */
+    
+    
 }
 

@@ -62,21 +62,17 @@ public class AudioManager : MonoBehaviour {
         sfxSource.PlayOneShot(s.clip);
     }
     
-    public void PlaySFXUntil(string name, Func<bool> condition)
+    public void PlayAceleration(string name)
     {
         Sound s = Array.Find(sfxSounds, x => x.name == name);
-        StartCoroutine(PlayLoop(s,condition));
-    }
-
-    private IEnumerator PlayLoop(Sound s, Func<bool> condition)
-    {
+        
         acelerationSource.loop = true;
         acelerationSource.clip = s.clip;
         acelerationSource.Play();
-        
-        yield return new WaitUntil(condition);
-        
-        acelerationSource.Stop();
+    }
+
+    public void StopAceleration()
+    {
         acelerationSource.loop = false;
     }
 }
