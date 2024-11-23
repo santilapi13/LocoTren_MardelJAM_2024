@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float turnSpeed = 200f; // Velocidad de giro.
     
     [Header("Bus Settings")]
-    [SerializeField] private float pivotOffset = 1.5f; // Distancia del pivote de giro desde el centro del colectivo.
+    [SerializeField] private Vector2 rearOffset = new Vector2(0,-1); // Distancia del pivote de giro desde el centro del colectivo.
 
     [Header("Drift Settings")]
     [SerializeField] private float driftFactor = 0.9f; // Derrape.
@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.centerOfMass = rearOffset;
     }
 
     private void Update()
@@ -80,22 +81,21 @@ public class Player : MonoBehaviour
     
     private void HandleSteering()
     {
+        
         if (rb.velocity.magnitude > 0.1f)
         {
-            // Determinar el punto de pivote (frente del autobús).
-            Vector2 pivotPoint = rb.position + (Vector2)transform.up * pivotOffset;
-
-            // Calcular giro según la entrada y la velocidad.
+            // Calculamos el torque de acuerdo con la entrada del jugador.
             float velocityFactor = rb.velocity.magnitude / maxSpeed;
-            float rotationAmount = -turnInput * turnSpeed * velocityFactor * Time.fixedDeltaTime;
+            float torqueAmount = -turnInput * turnSpeed * velocityFactor; // Calculamos el torque en función de la entrada.
 
-            // Aplicar giro alrededor del pivote.
-            rb.MoveRotation(rb.rotation + rotationAmount);
+            // Aplicamos el torque para girar el autobús.
+            rb.AddTorque(torqueAmount, ForceMode2D.Force);
 
-            // Ajustar posición para que el cuerpo siga al pivote.
-            Vector2 newBusPosition = pivotPoint - (Vector2)transform.up * pivotOffset;
-            rb.MovePosition(newBusPosition);
+            float desiredInertia = Mathf.Lerp(1f, 10f, SpeedPercentage);
+            rb.inertia = Mathf.Lerp(rb.inertia, desiredInertia, Time.fixedDeltaTime);
         }
     }
+    
+    
 }
 
