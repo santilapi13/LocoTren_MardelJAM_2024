@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour {
     
     public Sound[] musicSounds;
     public Sound[] sfxSounds;
-    public AudioSource musicSource, sfxSource;
+    public AudioSource musicSource, sfxSource, acelerationSource;
     public int currentMusic = 2;
 
     private void Awake() {
@@ -57,13 +57,26 @@ public class AudioManager : MonoBehaviour {
         musicSource.Play();
     }
 
-    public void PlaySFX(string name, bool loop) {
+    public void PlaySFXOneShot(string name) {
         Sound s = Array.Find(sfxSounds, x => x.name == name);
-        if (loop) {
-            sfxSource.loop = true;
-            sfxSource.clip = s.clip;
-            sfxSource.Play();
-        } else
-            sfxSource.PlayOneShot(s.clip);
+        sfxSource.PlayOneShot(s.clip);
+    }
+    
+    public void PlaySFXUntil(string name, Func<bool> condition)
+    {
+        Sound s = Array.Find(sfxSounds, x => x.name == name);
+        StartCoroutine(PlayLoop(s,condition));
+    }
+
+    private IEnumerator PlayLoop(Sound s, Func<bool> condition)
+    {
+        acelerationSource.loop = true;
+        acelerationSource.clip = s.clip;
+        acelerationSource.Play();
+        
+        yield return new WaitUntil(condition);
+        
+        acelerationSource.Stop();
+        acelerationSource.loop = false;
     }
 }
