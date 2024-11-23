@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour
 
     private void LateUpdate()
     {
-        float moveInput = player.GetMoveInput();
+        float moveInput = player.MoveInput;
         float targetForwardOffset = moveInput != 0 ? forwardOffset : 0f;
         
         currentForwardOffset = Mathf.Lerp(currentForwardOffset, targetForwardOffset, Time.deltaTime * transitionSpeed);
