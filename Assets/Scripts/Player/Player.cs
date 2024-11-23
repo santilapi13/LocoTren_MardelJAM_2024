@@ -103,7 +103,7 @@ public class Player : MonoBehaviour
         }
     }
 
-
+    /*
     private IEnumerator AcelerationSoundManager()
     {
         moving = false;
@@ -113,6 +113,6 @@ public class Player : MonoBehaviour
         //AudioManager.Instance.PlaySFXOneShot("frenada");
     }
     
-    
+    */
 }
 
