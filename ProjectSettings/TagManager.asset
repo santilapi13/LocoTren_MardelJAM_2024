@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: arena
+    uniqueID: 2751337549
+    locked: 0
+  - name: calle
+    uniqueID: 1088515351
+    locked: 0
+  - name: vereda
+    uniqueID: 2988825325
+    locked: 0
+  - name: trencito
+    uniqueID: 405046999
+    locked: 0
