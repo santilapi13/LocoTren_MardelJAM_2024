@@ -1,5 +1,5 @@
 using UnityEngine;
-
+[RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
     [Header("Movement Settings")]
@@ -10,56 +10,60 @@ public class Player : MonoBehaviour
     [SerializeField] private float turnSpeed = 200f; // Velocidad de giro.
 
     [Header("Drift Settings")]
-    [SerializeField] private float driftFactor = 0.9f; // Factor de derrape (0.9 es moderado).
-    [SerializeField] private float highSpeedTurnReduction = 0.5f; // Reducción del giro a alta velocidad.
-    [SerializeField] private float driftSlowdown = 0.95f; // Reducción de velocidad al derrapar.
-    
-    public float CurrentSpeed { get; private set;}// Velocidad actual del vehículo.
-    public float MoveInput { get; private set;}// Entrada del eje vertical (W/S o flechas).
-    public float TurnInput { get; private set;} // Entrada del eje horizontal (A/D o flechas).
-    public float Rotation => transform.eulerAngles.z;
-    public float MaxSpeed => maxSpeed;
+    [SerializeField] private float driftFactor = 0.9f; // Cuánto derrapa el vehículo.
 
-    private void Update()
+    private Rigidbody2D rb;
+    public float MoveInput { get; private set;} // Entrada del eje vertical (W/S o flechas).
+    private float turnInput; // Entrada del eje horizontal (A/D o flechas).
+    
+    public float SpeedPercentage => rb.velocity.magnitude / maxSpeed;
+    
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void FixedUpdate()
     {
         // Obtener entradas del jugador.
-        MoveInput = Input.GetAxis("Vertical"); 
-        TurnInput = Input.GetAxis("Horizontal");
+        MoveInput = Input.GetAxis("Vertical");
+        turnInput = Input.GetAxis("Horizontal");
 
-        // Aceleración o frenado según la entrada del jugador.
+        // Velocidad actual.
+        Vector2 forwardVelocity = transform.up * Vector2.Dot(rb.velocity, transform.up);
+        Vector2 rightVelocity = transform.right * Vector2.Dot(rb.velocity, transform.right);
+
+        // Derrape: Reduce la velocidad lateral.
+        rb.velocity = forwardVelocity + rightVelocity * driftFactor;
+
+        // Aplicar aceleración o frenado según la entrada del jugador.
         if (MoveInput > 0)
         {
-            CurrentSpeed = Mathf.MoveTowards(CurrentSpeed, maxSpeed, acceleration * Time.deltaTime);
+            rb.AddForce(transform.up * (acceleration * MoveInput), ForceMode2D.Force);
         }
         else if (MoveInput < 0)
         {
-            CurrentSpeed = Mathf.MoveTowards (CurrentSpeed, -maxSpeed / 2, brakingForce * Time.deltaTime);
+            rb.AddForce(transform.up * (brakingForce * MoveInput), ForceMode2D.Force);
         }
         else
         {
-            CurrentSpeed = Mathf.MoveTowards(CurrentSpeed, 0, deceleration * Time.deltaTime);
+            // Desacelerar naturalmente cuando no hay entrada.
+            rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
         }
 
-        // Aplicar movimiento.
-        transform.Translate(Vector3.up * (CurrentSpeed * Time.deltaTime));
-
-        // Reducir capacidad de giro a altas velocidades.
-        float adjustedTurnSpeed = turnSpeed * (1 - (Mathf.Abs(CurrentSpeed) / maxSpeed) * (1 - highSpeedTurnReduction));
-
-        // Rotar el vehículo.
-        if (CurrentSpeed != 0)
+        // Limitar la velocidad máxima.
+        if (rb.velocity.magnitude > maxSpeed)
         {
-            transform.Rotate(Vector3.forward, - TurnInput * adjustedTurnSpeed * Time.deltaTime);
+            rb.velocity = rb.velocity.normalized * maxSpeed;
         }
 
-        // Simular derrape.
-        if (Mathf.Abs(TurnInput) > 0.5f && Mathf.Abs(CurrentSpeed) > maxSpeed * 0.7f)
+        // Girar el vehículo.
+        if (rb.velocity.magnitude > 0.1f)
         {
-            // Aplicar desaceleración por derrape.
-            CurrentSpeed *= driftSlowdown;
+            float rotationAmount = -turnInput * turnSpeed * Time.fixedDeltaTime;
+            rb.MoveRotation(rb.rotation + rotationAmount);
         }
-        
-        
     }
-    
 }
+
+
