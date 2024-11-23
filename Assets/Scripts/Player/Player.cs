@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         HandleDrift();
         HandleMovement();
         HandleSteering();
-        if (moving) StartCoroutine(AcelerationSoundManager());
+        //if (moving) StartCoroutine(AcelerationSoundManager());
     }
 
     private void HandleDrift()
