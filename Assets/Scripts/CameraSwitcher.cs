@@ -9,7 +9,6 @@ public class CameraSwitcher : MonoBehaviour
     [Header("Camera")]
     [SerializeField] private CinemachineVirtualCamera slowSpeedCamera; // Cámara para baja velocidad.
     [SerializeField] private CinemachineVirtualCamera highSpeedCamera;
-    [SerializeField] private CinemachineVirtualCamera driftCamera;
     [Header("Player")]
     [SerializeField] private Player player; // Referencia al auto o jugador.
     [SerializeField] private float speedThreshold = 0.7f; // Velocidad para cambiar de cámara.
