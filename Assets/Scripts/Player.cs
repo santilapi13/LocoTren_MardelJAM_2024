@@ -42,7 +42,6 @@ public class Player : MonoBehaviour
         HandleDrift();
         HandleMovement();
         HandleSteering();
-        Debug.Log($"Speed: {rb.velocity}");
     }
 
     private void HandleDrift()
