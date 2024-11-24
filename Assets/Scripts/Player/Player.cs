@@ -28,6 +28,7 @@ public class Player : MonoBehaviour {
     private bool moving;
     private Vector2 previousVelocityDirection;
     [SerializeField] private float rotationCooldown = 0.2f;
+    private float CooldownPercentage => SpeedPercentage > 0.5? rotationCooldown / (3 * SpeedPercentage) : rotationCooldown;
     private float rotationTimer = 0f;
 
     public Rigidbody2D rb;
@@ -70,7 +71,7 @@ public class Player : MonoBehaviour {
         Vector2 rightVelocity = transform.right * Vector2.Dot(rb.velocity, transform.right);
         
         // Interpolamos entre la dirección previa y la actual
-        float inertiaFactor = Mathf.Clamp01(rotationTimer / rotationCooldown);
+        float inertiaFactor = Mathf.Clamp01(rotationTimer / CooldownPercentage);
         Vector2 finalVelocity = Vector2.Lerp(
             forwardVelocity + rightVelocity * driftFactor,
             previousDirectionVelocity,
@@ -112,7 +113,7 @@ public class Player : MonoBehaviour {
         
         rb.MoveRotation(newAngle);
         
-        rotationTimer = rotationCooldown;
+        rotationTimer = CooldownPercentage;
         playerAnim.ChangeDirection(newAngle);
     }
 
