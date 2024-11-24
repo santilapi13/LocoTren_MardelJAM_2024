@@ -12,7 +12,6 @@ public class PlayerAudio : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(player.SpeedPercentage);
         if (!noMatamaosOnCooldawn && player.SpeedPercentage > 0.8f)
         {
             StartCoroutine(NoMatamaos());
@@ -27,7 +26,6 @@ public class PlayerAudio : MonoBehaviour
 
     private IEnumerator NoMatamaos()
     {
-        Debug.Log("No matamaos");
         noMatamaosOnCooldawn = true;
         AudioManager.Instance.PlaySFXOneShot("noMatamos");
         yield return  new WaitForSeconds(noMatamaosCooldawn);
