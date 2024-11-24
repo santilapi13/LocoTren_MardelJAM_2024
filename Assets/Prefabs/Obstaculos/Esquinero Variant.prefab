@@ -7,6 +7,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5510154831224351976, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7110457
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510154831224351976, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7962092
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510154831224351976, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.019806309
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510154831224351976, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.022917377
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1358159
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2617354
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.04467675
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.030799508
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5734949
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.14523675
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 8.51
+      objectReference: {fileID: 0}
     - target: {fileID: 9016330026046840760, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
       propertyPath: slowAmount
       value: 0.3
@@ -43,9 +91,17 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 79f7272b7f38d6947bb87e39da5fb62f, type: 3}
+    - target: {fileID: 9016330026046840762, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016330026046840762, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 962632657
+      objectReference: {fileID: 0}
     - target: {fileID: 9016330026046840766, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
       propertyPath: m_Name
-      value: Esquinero
+      value: Esquinero Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9016330026046840767, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
       propertyPath: m_RootOrder

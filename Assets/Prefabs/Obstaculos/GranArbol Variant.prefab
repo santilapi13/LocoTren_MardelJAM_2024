@@ -7,6 +7,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5510154831224351976, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Size.x
+      value: 1.7614758
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510154831224351976, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Size.y
+      value: 1.4794663
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510154831224351976, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.14931692
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510154831224351976, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.6524685
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Size.x
+      value: 2.0774665
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Size.y
+      value: 1.46475
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.12769479
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.067625046
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5366487
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.15424092
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 8.25
+      objectReference: {fileID: 0}
     - target: {fileID: 9016330026046840760, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
       propertyPath: slowAmount
       value: 0.8
@@ -39,6 +87,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: fb09b91c074d44e45aebcb52ea033340, type: 3}
+    - target: {fileID: 9016330026046840762, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016330026046840762, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 962632657
+      objectReference: {fileID: 0}
     - target: {fileID: 9016330026046840766, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
       propertyPath: m_Name
       value: GranArbol Variant

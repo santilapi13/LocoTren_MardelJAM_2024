@@ -10,14 +10,14 @@ public class Obstacle : MonoBehaviour {
     [SerializeField] private string audioName;
     
     SpriteRenderer spriteRenderer;
-    BoxCollider2D collider2D;
+    Collider2D collider2D;
 
     [SerializeField] private float velocityToBrack = 0.7f;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        collider2D = GetComponent<BoxCollider2D>();
+        collider2D = GetComponent<Collider2D>();
     }
 
     private void Update()

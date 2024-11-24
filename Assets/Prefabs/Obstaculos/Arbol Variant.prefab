@@ -7,6 +7,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5510154831224351976, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Size.x
+      value: 1.5686361
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510154831224351976, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1737901
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510154831224351976, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0403005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510154831224351976, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.055556178
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1034851
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Size.y
+      value: 0.82108307
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0118255615
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.00060653687
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.52193916
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.10381779
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 6.66
+      objectReference: {fileID: 0}
     - target: {fileID: 9016330026046840760, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
       propertyPath: velocityToBrack
       value: 0.3
@@ -26,6 +74,14 @@ PrefabInstance:
     - target: {fileID: 9016330026046840761, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
       propertyPath: m_Offset.y
       value: -2.532093
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016330026046840761, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.52193916
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016330026046840761, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.10381779
       objectReference: {fileID: 0}
     - target: {fileID: 9016330026046840761, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -49,6 +105,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9016330026046840762, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016330026046840762, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016330026046840762, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 962632657
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016330026046840762, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteSortPoint
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9016330026046840766, guid: eaf4f323ecce56842b363de6759daa28, type: 3}

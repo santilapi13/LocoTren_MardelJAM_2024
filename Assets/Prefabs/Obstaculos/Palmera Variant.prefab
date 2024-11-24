@@ -7,6 +7,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5510154831224351976, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2941775
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510154831224351976, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1728675
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510154831224351976, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.030997552
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510154831224351976, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.053560507
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2495325
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1441827
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.01347971
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.05267465
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5175299
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.1200251
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313019874228571452, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 6.23
+      objectReference: {fileID: 0}
     - target: {fileID: 9016330026046840760, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
       propertyPath: velocityToBrack
       value: 0.5
@@ -41,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: daedc006692c55b44a236030b1ad4c14, type: 3}
     - target: {fileID: 9016330026046840766, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
       propertyPath: m_Name
-      value: Palmera
+      value: Palmera Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9016330026046840767, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
       propertyPath: m_RootOrder
