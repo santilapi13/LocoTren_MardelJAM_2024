@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private TuristicPoint currentDestination;
     [SerializeField] private float minDestinationDistance = 10f;
 
-    [SerializeField] private float minTimeTarget = 10f;
-    [SerializeField] private float maxTimeTarget = 30f;
+    [SerializeField] private float minTimeTarget = 20f;
+    [SerializeField] private float maxTimeTarget = 45f;
     
     [SerializeField] private float initialPoints;
     [SerializeField] private Player player;

@@ -62,8 +62,7 @@ public class Player : MonoBehaviour {
 
     private void HandleDrift() {
         // Calculamos la velocidad en la dirección previa al giro
-        Vector2 previousDirectionVelocity = previousVelocityDirection * 
-            Vector2.Dot(rb.velocity, previousVelocityDirection);
+        Vector2 previousDirectionVelocity = previousVelocityDirection * Vector2.Dot(rb.velocity, previousVelocityDirection);
         
         // Calculamos la velocidad en la dirección actual
         Vector2 forwardVelocity = transform.up * Vector2.Dot(rb.velocity, transform.up);
@@ -103,13 +102,18 @@ public class Player : MonoBehaviour {
             previousVelocityDirection = rb.velocity.normalized;
         }
         
-        float newAngle = rb.rotation + (turnInput < 0 ? 30f : -30f);
-        newAngle = Mathf.Repeat(newAngle, 360f);
+        float newAngle = transform.eulerAngles.z + (turnInput < 0 ? 30f : -30f);
+
+        // Restringimos el ángulo a múltiplos de 30°.
         newAngle = Mathf.Round(newAngle / 30f) * 30f;
-        
-        rb.MoveRotation(newAngle);
-        
+
+        // Aplicamos la rotación manualmente.
+        transform.rotation = Quaternion.Euler(0, 0, newAngle);
+
+        // Reiniciamos el temporizador de enfriamiento.
         rotationTimer = rotationCooldown;
+
+        // Lógica para actualizar animaciones o efectos.
         playerAnim.ChangeDirection(newAngle);
     }
 
