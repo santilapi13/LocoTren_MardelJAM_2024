@@ -741,7 +741,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927312384}
   m_LocalRotation: {x: -0.15680641, y: 0.19257177, z: -0.027730789, w: 0.96827626}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 4}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -751,7 +751,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -17.037, y: 23.524, z: -6.854}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 583, y: -76}
+  m_AnchoredPosition: {x: 583, y: -83}
   m_SizeDelta: {x: 119.701, y: 51.529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &927312386
@@ -1208,7 +1208,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 780529734}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1405,18 +1405,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398087665}
-  m_LocalRotation: {x: 0.30200207, y: -0.029555695, z: -0.02537266, w: 0.9525112}
-  m_LocalPosition: {x: 0, y: 0, z: -8.897}
+  m_LocalRotation: {x: 0.42021307, y: -0.032531314, z: -0.021424849, w: 0.90658903}
+  m_LocalPosition: {x: 0, y: 0, z: 13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 234883826}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 35.017, y: -5.018, z: -4.636}
+  m_LocalEulerAnglesHint: {x: 49.511, y: -6.81, z: -5.851}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.077, y: -336.903}
-  m_SizeDelta: {x: 614.678, y: 134.725}
+  m_AnchoredPosition: {x: -66, y: -328}
+  m_SizeDelta: {x: 681.612, y: 228.717}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1398087667
 MonoBehaviour:
@@ -1501,7 +1501,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 1.8471079, y: 0, z: 12.2612, w: -1.4176795}
+  m_margin: {x: 1.8471079, y: -4.3984528, z: 12.2612, w: -1.4176795}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1738,7 +1738,7 @@ GameObject:
   - component: {fileID: 1971453406}
   - component: {fileID: 1971453405}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: dato_recaudacion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1757,7 +1757,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 241739750}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
