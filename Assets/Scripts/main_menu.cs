@@ -2,21 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class main_menu : MonoBehaviour
 {
-    public float puntos_finales = 0.0;
-    public float tiempo_final = 0.0;
-
-    public start()
-    {
-        if (SceneManager.GetActiveScene().buildIndex == 3)
-        {
-            // puntos_finales = GameManager.Instance. PUNTOS GANADOS
-            // tiempo_final = GameManager.Instance. DURACION JUEGO
-        }
-
-    }
     public void change_scene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
