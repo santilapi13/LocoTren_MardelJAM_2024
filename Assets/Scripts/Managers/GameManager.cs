@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
@@ -85,9 +86,11 @@ public class GameManager : MonoBehaviour {
     }
 
     private void GameOver() {
-        // TODO: Implementar Game Over
-        Debug.Log("PERDISTE CAPO!");
+        PointsTraker.Instance.points = points;
+        PointsTraker.Instance.time = globalTime;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    
 
     public void EarnPoints(float points) {
         this.points += points;

@@ -13,8 +13,8 @@ public class set_values_end : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //duracion = VALOR OBTENIDO DEL GAME MANAGER
-        //puntuacion = VALOR OBTENIDO DEL GAME MANAGER
+        duracion = PointsTraker.Instance.time;
+        puntuacion = PointsTraker.Instance.points;
         assign_values();
     }
 
