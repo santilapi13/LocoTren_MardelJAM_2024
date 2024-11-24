@@ -10,6 +10,7 @@ public class PlayerAnimation : MonoBehaviour {
     private float orderChangeTime = 0.3f;
     private float timer;
 
+    private float orderChangePerVelocity => orderChangeTime - 0.2f * player.SpeedPercentage;
     private void Start() {
         timer = orderChangeTime;
         sr = GetComponent<SpriteRenderer>();
@@ -48,7 +49,7 @@ public class PlayerAnimation : MonoBehaviour {
         timer -= Time.deltaTime;
         if (!(timer <= 0)) return;
         
-        timer = orderChangeTime;
+        timer = orderChangePerVelocity;
 
         orderIndex = (orderIndex < 3) ? orderIndex + 1 : 0;
         ChangeSprite();
