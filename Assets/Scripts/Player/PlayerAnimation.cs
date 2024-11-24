@@ -59,6 +59,7 @@ public class PlayerAnimation : MonoBehaviour {
     }
 
     private void ChangeSprite() {
+        player.AnimatorIndex(directionalIndex,!sr.flipX);
         sr.sprite = spriteMatrix[directionalIndex, orderIndex];
     }
 }

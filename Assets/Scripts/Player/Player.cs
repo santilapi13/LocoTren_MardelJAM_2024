@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -17,10 +18,11 @@ public class Player : MonoBehaviour {
     [SerializeField] private float acceleration = 5f; // Aceleración.
     [SerializeField] private float brakingForce = 6f; // Fuerza de frenado.
     public float SpeedPercentage => rb.velocity.magnitude / maxSpeed;
-    public bool Drifting => SpeedPercentage > 0.7f && Mathf.Abs(turnInput) > 0.5f;
+    public bool Drifting => SpeedPercentage > 0.5f && Mathf.Abs(turnInput) > 0f;
     
     [Header("Bus Settings")] [SerializeField]
     private Vector2 rearOffset = new(0, -1); // Distancia del pivote de giro desde el centro del colectivo.
+    [SerializeField] Animator animator;
 
     [Header("Drift Settings")] [SerializeField]
     private float driftFactor = 0.9f; // Derrape.
@@ -112,15 +114,10 @@ public class Player : MonoBehaviour {
     }
 
 
-    public void Slow(float slowTime, float slowAmount) {
+    public void Slow(float slowAmount) {
         rb.velocity *= 1 - slowAmount;
-        StartCoroutine(FinishSlow(slowTime, slowAmount));
     }
-
-    private IEnumerator FinishSlow(float slowTime, float slowAmount) {
-        yield return new WaitForSeconds(slowTime);
-        rb.velocity /= 1 - slowAmount;
-    }
+    
     
     
     // Estados 
@@ -183,5 +180,11 @@ public class Player : MonoBehaviour {
 
     private void HandleBrakingState() {
         //AudioManager.Instance.PlayAceleration("desacelerar");
+    }
+
+    public void AnimatorIndex(int num, bool flip)
+    {
+        animator.SetInteger("index",num);
+        animator.SetBool("flip", flip);
     }
 }

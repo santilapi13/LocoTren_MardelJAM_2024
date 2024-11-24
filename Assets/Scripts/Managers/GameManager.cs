@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour {
 
     public void Crash(float slowTime, float slowAmount, float pointsPenalty) {
         LoosePoints(pointsPenalty);
-        player.Slow(slowTime, slowAmount);
+        player.Slow(slowAmount);
     }
 
     private void PointArrow() {
