@@ -81,6 +81,16 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 41bc6aee6c0d2cb41ab817ba39e397f5, type: 3}
   - name: desacelerar
     clip: {fileID: 8300000, guid: 8475fd1df54f23f45bc77b18cc5176bf, type: 3}
+  - name: nosMatamos1
+    clip: {fileID: 8300000, guid: 3ed8c9b47601a13408255da96c729ff3, type: 3}
+  - name: nosMatamos2
+    clip: {fileID: 8300000, guid: 517807dd5ea367b4db3d89932872c2f0, type: 3}
+  - name: nosMatamos3
+    clip: {fileID: 8300000, guid: d62f90745def66c4fbfacbe70171c024, type: 3}
+  - name: nosMatamos4
+    clip: {fileID: 8300000, guid: b64554db8035d694c87cae3b78dfba74, type: 3}
+  - name: nosMatamos5
+    clip: {fileID: 8300000, guid: 1c670429caf0094439cd62fe2d7e25b5, type: 3}
   musicSource: {fileID: 5583126319196473241}
   sfxSource: {fileID: 5583126319196473240}
   acelerationSource: {fileID: 6484488304162060795}

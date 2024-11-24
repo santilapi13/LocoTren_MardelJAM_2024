@@ -279,5 +279,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 5615653236537552476}
-  noMatamaosCooldawn: 60
+  noMatamaosCooldawn: 20
   derrapeCooldawn: 10

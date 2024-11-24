@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerAudio : MonoBehaviour
 {
@@ -27,7 +28,8 @@ public class PlayerAudio : MonoBehaviour
     private IEnumerator NoMatamaos()
     {
         noMatamaosOnCooldawn = true;
-        AudioManager.Instance.PlaySFXOneShot("noMatamos");
+        var rand = Random.Range(1, 6);
+        AudioManager.Instance.PlaySFXOneShot("nosMatamos" + rand);
         yield return  new WaitForSeconds(noMatamaosCooldawn);
         noMatamaosOnCooldawn = false;
     }
