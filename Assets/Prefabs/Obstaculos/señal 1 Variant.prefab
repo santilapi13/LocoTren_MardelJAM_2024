@@ -23,6 +23,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.10711743
       objectReference: {fileID: 0}
+    - target: {fileID: 9016330026046840760, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
+      propertyPath: velocityToBrack
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 9016330026046840762, guid: eaf4f323ecce56842b363de6759daa28, type: 3}
       propertyPath: m_Sprite
       value: 
