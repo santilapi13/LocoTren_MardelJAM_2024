@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour {
     
     [Header("Bus Settings")] [SerializeField]
     private Vector2 rearOffset = new(0, -1); // Distancia del pivote de giro desde el centro del colectivo.
+    [SerializeField] Animator animator;
 
     [Header("Drift Settings")] [SerializeField]
     private float driftFactor = 0.9f; // Derrape.
@@ -183,5 +185,11 @@ public class Player : MonoBehaviour {
 
     private void HandleBrakingState() {
         //AudioManager.Instance.PlayAceleration("desacelerar");
+    }
+
+    public void AnimatorIndex(int num, bool flip)
+    {
+        animator.SetInteger("index",num);
+        animator.SetBool("flip", flip);
     }
 }
