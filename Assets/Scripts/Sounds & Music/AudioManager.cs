@@ -81,6 +81,19 @@ public class AudioManager : MonoBehaviour {
         yield return new WaitUntil(condition);
 
         acelerationSource.Stop();
+    }
+
+    public void PlayAceleration(string name)
+    {
+        Sound s = Array.Find(sfxSounds, x => x.name == name);
+        
+        acelerationSource.loop = true;
+        acelerationSource.clip = s.clip;
+        acelerationSource.Play();
+    }
+
+    public void StopAceleration()
+    {
         acelerationSource.loop = false;
     }
 }

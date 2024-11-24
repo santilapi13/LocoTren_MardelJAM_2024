@@ -2,6 +2,14 @@ using System.Collections;
 using UnityEngine;
 
 
+public enum PlayerState
+{
+    accelerating,
+    constantSpeed,
+    braking,
+    stopped
+}
+
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
@@ -27,6 +35,7 @@ public class Player : MonoBehaviour
 
     public float SpeedPercentage => rb.velocity.magnitude / maxSpeed;
 
+    public PlayerState PlayerState { get; private set; }
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -35,7 +44,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        // Capturar entradas del jugador.
+        
         MoveInput = Input.GetAxis("Vertical");
         turnInput = Input.GetAxis("Horizontal");
     }
@@ -43,6 +52,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         if (rb.velocity.magnitude < 0.1 && MoveInput != 0) moving = true;
+        HandleState();
         HandleDrift();
         HandleMovement();
         HandleSteering();
@@ -103,6 +113,79 @@ public class Player : MonoBehaviour
     private IEnumerator FinishSlow(float slowTime, float slowAmount) {
         yield return new WaitForSeconds(slowTime);
         rb.velocity /= 1 - slowAmount;
+    }
+    
+    private void HandleState()
+    {
+        if (rb.velocity.magnitude < 0.1f)
+        {
+            SetPlayerState(PlayerState.stopped);
+            return;
+        }
+
+        if (MoveInput * rb.velocity.normalized.y > 0.1f && SpeedPercentage < 0.7)
+        {
+            SetPlayerState(PlayerState.accelerating);
+            return;
+        }
+
+        if (SpeedPercentage > 0.7)
+        {
+            SetPlayerState(PlayerState.constantSpeed);
+            return;
+        }
+
+       
+        SetPlayerState(PlayerState.braking);
+    }
+
+    private void SetPlayerState(PlayerState newState)
+    {
+        if (PlayerState == newState) return;
+        
+        PlayerState = newState;
+        OnStateChanged();
+        
+    }
+
+    private void OnStateChanged()
+    {
+        switch (PlayerState)
+        {
+            case PlayerState.stopped:
+                HandleStoppedState();
+                break;
+            case PlayerState.accelerating:
+                HandleAcceleratingState();
+                break;
+            case PlayerState.constantSpeed:
+                HandleConstantSpeedState();
+                break;
+            case PlayerState.braking:
+                HandleBrakingState();
+                break;
+        } 
+    }
+
+
+    private void HandleStoppedState()
+    {
+        AudioManager.Instance.StopAceleration();
+    }
+
+    private void HandleAcceleratingState()
+    {
+        AudioManager.Instance.PlayAceleration("arranque");
+    }
+
+    private void HandleConstantSpeedState()
+    {
+        AudioManager.Instance.PlayAceleration("constante");
+    }
+
+    private void HandleBrakingState()
+    {
+        AudioManager.Instance.PlayAceleration("desacelerar");
     }
     
 }

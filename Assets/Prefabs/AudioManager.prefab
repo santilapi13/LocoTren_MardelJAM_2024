@@ -55,16 +55,10 @@ MonoBehaviour:
   - name: credits
     clip: {fileID: 8300000, guid: 35bb7f59e6cbb2a4fb87fa1ac5181702, type: 3}
   sfxSounds:
-  - name: acelerada
-    clip: {fileID: 8300000, guid: aada027505e75144ab9a2f01a9bc65a3, type: 3}
-  - name: acelerada_loop
-    clip: {fileID: 8300000, guid: fa8c4dfb9173c6b4cab4153151116bd3, type: 3}
   - name: alert
     clip: {fileID: 8300000, guid: c494af0fd28f7294e90b7aef1b064760, type: 3}
   - name: choque
     clip: {fileID: 8300000, guid: 671e74986aa088548b4c5d40b1637df9, type: 3}
-  - name: frenada
-    clip: {fileID: 8300000, guid: 3865594c5011e5f46b056a09c0abaf13, type: 3}
   - name: levantar_cliente
     clip: {fileID: 8300000, guid: db97812fb9084b74f9ce326db65253fb, type: 3}
   - name: sirena_policia
@@ -79,9 +73,17 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 8022aa298501a3f47a5ee23f99ddfdc7, type: 3}
   - name: click_botones
     clip: {fileID: 8300000, guid: 8e648c8ae8d85d4439e6cfc7b4540a6a, type: 3}
+  - name: frenada
+    clip: {fileID: 8300000, guid: ef549467d696b7d48a8fc5429d93610d, type: 3}
+  - name: arranque
+    clip: {fileID: 8300000, guid: cb0e0acd3b3ca5a4d8010a3685778a73, type: 3}
+  - name: constante
+    clip: {fileID: 8300000, guid: 41bc6aee6c0d2cb41ab817ba39e397f5, type: 3}
+  - name: desacelerar
+    clip: {fileID: 8300000, guid: 8475fd1df54f23f45bc77b18cc5176bf, type: 3}
   musicSource: {fileID: 5583126319196473241}
   sfxSource: {fileID: 5583126319196473240}
-  sfxContinuosSource: {fileID: 6484488304162060795}
+  acelerationSource: {fileID: 6484488304162060795}
   currentMusic: 2
 --- !u!82 &5583126319196473241
 AudioSource:
