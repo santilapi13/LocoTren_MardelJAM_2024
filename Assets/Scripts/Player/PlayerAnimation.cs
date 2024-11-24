@@ -4,6 +4,7 @@ public class PlayerAnimation : MonoBehaviour {
     private SpriteRenderer sr;
     [SerializeField] private Player player;
     [SerializeField] private Sprite[] sprites;
+    [SerializeField] private TrailRenderer trail;
     private int directionalIndex;  // 0-6
     private int orderIndex;   // 0-3
     private Sprite[,] spriteMatrix;
@@ -43,7 +44,9 @@ public class PlayerAnimation : MonoBehaviour {
         ChangeSprite();
     }
 
-    private void FixedUpdate() {
+    private void FixedUpdate()
+    {
+        trail.emitting = player.Drifting;
         transform.position = player.transform.position;
         
         timer -= Time.deltaTime;
