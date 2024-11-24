@@ -361,6 +361,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7075324549b37c643b1b5d9a2d4159dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &269530574
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5583126319196473223, guid: 387f3a14117d01040ae8fcce3aa67f4e, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583126319196473223, guid: 387f3a14117d01040ae8fcce3aa67f4e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.5754308
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583126319196473223, guid: 387f3a14117d01040ae8fcce3aa67f4e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -51.322903
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583126319196473223, guid: 387f3a14117d01040ae8fcce3aa67f4e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.228256
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583126319196473223, guid: 387f3a14117d01040ae8fcce3aa67f4e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583126319196473223, guid: 387f3a14117d01040ae8fcce3aa67f4e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583126319196473223, guid: 387f3a14117d01040ae8fcce3aa67f4e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583126319196473223, guid: 387f3a14117d01040ae8fcce3aa67f4e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583126319196473223, guid: 387f3a14117d01040ae8fcce3aa67f4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583126319196473223, guid: 387f3a14117d01040ae8fcce3aa67f4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583126319196473223, guid: 387f3a14117d01040ae8fcce3aa67f4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583126319196473243, guid: 387f3a14117d01040ae8fcce3aa67f4e, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 387f3a14117d01040ae8fcce3aa67f4e, type: 3}
 --- !u!1 &799475727
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +430,7 @@ GameObject:
   - component: {fileID: 799475731}
   - component: {fileID: 799475730}
   - component: {fileID: 799475729}
+  - component: {fileID: 799475732}
   m_Layer: 5
   m_Name: Start_button
   m_TagString: Untagged
@@ -423,9 +481,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.44313726, g: 0.39215687, b: 0.39215687, a: 1}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4433962, g: 0.39110893, b: 0.39110893, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -495,6 +553,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799475727}
   m_CullTransparentMesh: 1
+--- !u!114 &799475732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799475727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3530bb16f3a9a4a448e88498bf9c0c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSFX: hover_botones
+  clickSFX: click_botones
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  clickColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &927312384
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +582,7 @@ GameObject:
   - component: {fileID: 927312388}
   - component: {fileID: 927312387}
   - component: {fileID: 927312386}
+  - component: {fileID: 927312389}
   m_Layer: 5
   m_Name: Exit_button
   m_TagString: Untagged
@@ -557,9 +633,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.44313726, g: 0.39215687, b: 0.39215687, a: 1}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.44313726, g: 0.39215687, b: 0.39215687, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -629,6 +705,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927312384}
   m_CullTransparentMesh: 1
+--- !u!114 &927312389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927312384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3530bb16f3a9a4a448e88498bf9c0c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSFX: hover_botones
+  clickSFX: click_botones
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  clickColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

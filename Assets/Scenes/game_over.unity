@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -831,6 +831,7 @@ GameObject:
   - component: {fileID: 927312388}
   - component: {fileID: 927312387}
   - component: {fileID: 927312386}
+  - component: {fileID: 927312389}
   m_Layer: 5
   m_Name: Exit_button
   m_TagString: Untagged
@@ -953,6 +954,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927312384}
   m_CullTransparentMesh: 1
+--- !u!114 &927312389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927312384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3530bb16f3a9a4a448e88498bf9c0c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSFX: hover_botones
+  clickSFX: click_botones
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  clickColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,6 +1067,7 @@ GameObject:
   - component: {fileID: 971359006}
   - component: {fileID: 971359005}
   - component: {fileID: 971359004}
+  - component: {fileID: 971359007}
   m_Layer: 5
   m_Name: back_main_menu
   m_TagString: Untagged
@@ -1171,6 +1190,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971359002}
   m_CullTransparentMesh: 1
+--- !u!114 &971359007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971359002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3530bb16f3a9a4a448e88498bf9c0c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSFX: hover_botones
+  clickSFX: click_botones
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  clickColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &978195026
 GameObject:
   m_ObjectHideFlags: 0
