@@ -50,6 +50,12 @@ TagManager:
   - name: vereda
     uniqueID: 2988825325
     locked: 0
-  - name: trencito
+  - name: Edificos
     uniqueID: 405046999
+    locked: 0
+  - name: Jugador
+    uniqueID: 962632657
+    locked: 0
+  - name: Punto
+    uniqueID: 2198629767
     locked: 0
