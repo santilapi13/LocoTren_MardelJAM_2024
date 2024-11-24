@@ -99,13 +99,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc32020aa3655864088a46d75ce95732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 30
-  acceleration: 60
-  deceleration: 10
+  maxSpeed: 20
+  acceleration: 50
+  deceleration: 15
   brakingForce: 14
-  turnSpeed: 150
   rearOffset: {x: 0, y: -1}
   driftFactor: 0.9
+  rotationCooldown: 0.15
+  rb: {fileID: 0}
+  playerAnim: {fileID: 0}
 --- !u!50 &8718699524843500087
 Rigidbody2D:
   serializedVersion: 4

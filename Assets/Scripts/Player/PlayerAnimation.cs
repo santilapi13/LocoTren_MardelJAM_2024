@@ -7,7 +7,7 @@ public class PlayerAnimation : MonoBehaviour {
     private int directionalIndex;  // 0-6
     private int orderIndex;   // 0-3
     private Sprite[,] spriteMatrix;
-    private float orderChangeTime = 1f;
+    private float orderChangeTime = 0.3f;
     private float timer;
 
     private void Start() {
@@ -25,21 +25,26 @@ public class PlayerAnimation : MonoBehaviour {
         }
     }
 
-    private void FixedUpdate() {
-        transform.position = player.transform.position;
-        var angle = player.transform.eulerAngles.z;
-        directionalIndex = angle switch {
-            < 10 or > 350 => 0,
-            < 30 or > 330 => 1,
-            < 80 or > 280 => 2,
-            < 100 or > 260 => 3,
-            < 150 or > 210 => 4,
-            < 170 or > 190 => 5,
-            _ => 6
+    public void ChangeDirection(float newAngle) {
+
+        directionalIndex = newAngle switch {
+            0 => 0,
+            30 or 330 => 1,
+            60 or 300 => 2,
+            90 or 270 => 3,
+            120 or 240 => 4,
+            150 or 210 => 5,
+            180 => 6,
+            _ => directionalIndex 
         };
 
-        sr.flipX = angle is > 0 and < 180;
+        sr.flipX = newAngle is > 0 and < 180;
+        ChangeSprite();
+    }
 
+    private void FixedUpdate() {
+        transform.position = player.transform.position;
+        
         timer -= Time.deltaTime;
         if (!(timer <= 0)) return;
         

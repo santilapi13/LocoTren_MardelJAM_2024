@@ -68,7 +68,7 @@ MonoBehaviour:
   - name: festejo
     clip: {fileID: 8300000, guid: 2405bbb840c6dd6499361073d9f8708e, type: 3}
   - name: fotomulta
-    clip: {fileID: 8300000, guid: 0077b4f33a2a97941b809b00ba3793e1, type: 3}
+    clip: {fileID: 8300000, guid: 383706ccb3c37b047ac98450cc3fe9dc, type: 3}
   - name: hover_botones
     clip: {fileID: 8300000, guid: 8022aa298501a3f47a5ee23f99ddfdc7, type: 3}
   - name: click_botones
