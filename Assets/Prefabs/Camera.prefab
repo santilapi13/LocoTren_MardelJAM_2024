@@ -267,7 +267,7 @@ MonoBehaviour:
   baseFOV: 60
   maxFOV: 90
   maxYoffset: 10
-  fovTransitionSpeed: 2
+  fovTransitionSpeed: 5
 --- !u!1 &7063613716566309382
 GameObject:
   m_ObjectHideFlags: 0
