@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour {
     private void GameOver() {
         PointsTraker.Instance.points = points;
         PointsTraker.Instance.time = globalTime;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     
 

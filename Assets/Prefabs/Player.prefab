@@ -195,7 +195,7 @@ MonoBehaviour:
   rearOffset: {x: 0, y: -1}
   animator: {fileID: 0}
   driftFactor: 0.9
-  rotationCooldown: 0.15
+  rotationCooldown: 0.2
   rb: {fileID: 8718699524843500087}
   playerAnim: {fileID: 0}
 --- !u!50 &8718699524843500087
