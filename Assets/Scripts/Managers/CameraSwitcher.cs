@@ -1,16 +1,14 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
 public class CameraSwitcher : MonoBehaviour
 {
-    [Header("Camera")]
-    [SerializeField] private CinemachineVirtualCamera slowSpeedCamera; // Cámara para baja velocidad.
+    [Header("Camera")] [SerializeField] private CinemachineVirtualCamera slowSpeedCamera; // Cámara para baja velocidad.
+
     [SerializeField] private CinemachineVirtualCamera highSpeedCamera;
-    [Header("Player")]
-    [SerializeField] private Player player; // Referencia al auto o jugador.
+
+    [Header("Player")] [SerializeField] private Player player; // Referencia al auto o jugador.
+
     [SerializeField] private float speedThreshold = 0.7f; // Velocidad para cambiar de cámara.
 
     private void Start()
@@ -21,9 +19,8 @@ public class CameraSwitcher : MonoBehaviour
 
     private void Update()
     {
-
         // Cambia la prioridad de las cámaras según la velocidad.
-        if (player.SpeedPercentage >= speedThreshold  && player.MoveInput > 0)
+        if (player.SpeedPercentage >= speedThreshold && player.MoveInput > 0)
         {
             // Alta velocidad: prioriza la cámara de alta velocidad.
             highSpeedCamera.Priority = 10;
