@@ -46,7 +46,7 @@ public class PlayerAnimation : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        //trail.emitting = player.Drifting;
+        trail.emitting = player.Drifting;
         transform.position = player.transform.position;
         
         timer -= Time.deltaTime;
