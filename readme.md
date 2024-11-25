@@ -10,6 +10,8 @@ En LocoMotren: Trencito a la locura!, manejas el reconocido transporte turístic
 
 PD: Desde el equipo de legales me insisten en que deje asentado que con la compra del pasaje usted renuncia a cualquier posibilidad de demandarnos a eternidad. No se a que se refieren...
 
+------------------------------
+
 In LocoMotren: Little Train of Madness!, you drive the you drive the renowned tourist transport while dropping off your passengers at their chosen destinations in the shortest time possible. So buy a ticket now and don't miss out on the experience of a lifetime!
 
 PS: The legal team insists that I state that by purchasing the ticket you renounce any possibility of suing us forever. I don't know what they mean...
@@ -19,6 +21,9 @@ https://www.youtube.com/watch?v=PpUxFsSesus&t=23s
 
 # Team
 Game Design: Cristian Diaz De Maio
+
 Development: Santiago Lapiana, Nahuel Bianca
+
 2D Art: Yamil Tahuil, Cristian Diaz De Maio
+
 Music/SFX: Lucas Goytia, Cristian Diaz De Maio
